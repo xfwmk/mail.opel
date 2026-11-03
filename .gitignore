@@ -1,9 +1,0 @@
-node_modules/
-.wrangler/
-.dev.vars
-.dev.vars.*
-.env
-.env.*
-secrets.json
-tokens.json
-credentials.json
