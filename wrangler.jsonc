@@ -11,7 +11,7 @@
   "kv_namespaces": [
     {
       "binding": "MAIL_TOKENS",
-      "id": "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+      "id": "de56d4f95a9244cdb38cffe3e4d943c8"
     }
   ]
 }
