@@ -1,1 +1,17 @@
-
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "mail.opel",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-03",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "kv_namespaces": [
+    {
+      "binding": "MAIL_TOKENS",
+      "id": "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+    }
+  ]
+}
