@@ -1,1 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="color-scheme" content="dark">
+  <title>𖦏 opel | Mail</title>
+  <link rel="stylesheet" href="/assets/mail.css">
+  <script src="/assets/mail.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="top-inner">
+      <a class="brand" href="/">𖦏 opel <span>/ mail</span></a>
+      <div class="top-actions"><span id="account" class="account">Not connected</span><a class="site-link" href="https://opel.org.uk">Main site ↗</a></div>
+    </div>
+  </header>
 
+  <main class="app">
+    <aside class="sidebar" aria-label="Mailbox folders">
+      <button id="compose-open" class="compose" type="button">+ Compose</button>
+      <nav class="folders" id="folders" aria-label="Folders">
+        <button class="active" data-folder="INBOX" type="button">Inbox</button>
+        <button data-folder="STARRED" type="button">Starred</button>
+        <button data-folder="SENT" type="button">Sent</button>
+        <button data-folder="ALL" type="button">All mail</button>
+        <button data-folder="TRASH" type="button">Trash</button>
+      </nav>
+      <div class="sidebar-footer"><span class="status-dot"></span> Gmail API</div>
+    </aside>
+
+    <section class="mailbox" aria-labelledby="folder-name">
+      <div class="list-head">
+        <div class="heading"><h1 id="folder-name">Inbox</h1><span id="message-count"></span></div>
+        <form id="search-form" class="search" role="search">
+          <input id="search" type="search" placeholder="Search mail" aria-label="Search mail" autocomplete="off">
+          <button type="submit" aria-label="Search">⌕</button>
+        </form>
+        <button class="refresh" type="button" id="refresh" aria-label="Refresh mail">↻</button>
+      </div>
+      <div id="notice" class="notice" role="status">Loading mailbox…</div>
+      <div id="messages" class="message-list" aria-label="Messages"></div>
+      <div class="list-footer"><button type="button" id="load-more" hidden>Load more</button></div>
+    </section>
+
+    <article class="reader" id="reader" aria-label="Message preview">
+      <div class="reader-empty" id="reader-empty">Select a message to read it.</div>
+      <div id="reader-content" hidden>
+        <div class="reader-top">
+          <button id="back" class="back" type="button">← Back</button>
+          <div class="reader-actions">
+            <button id="mark-read" type="button">Mark unread</button>
+            <button id="star" type="button">☆ Star</button>
+            <button id="archive" type="button">Archive</button>
+            <button id="trash" type="button">Trash</button>
+          </div>
+        </div>
+        <h2 id="read-subject"></h2>
+        <div class="message-meta"><span id="read-from"></span><time id="read-date"></time></div>
+        <p class="read-to" id="read-to"></p>
+        <div class="read-body" id="read-body"></div>
+      </div>
+    </article>
+  </main>
+
+  <dialog id="compose-dialog" class="compose-dialog" aria-labelledby="compose-title">
+    <form id="compose-form" class="compose-form">
+      <div class="dialog-top"><h2 id="compose-title">New message</h2><button type="button" id="compose-close" aria-label="Close">×</button></div>
+      <label>To<input id="to" name="to" type="text" placeholder="name@example.com" autocomplete="email" required></label>
+      <label>Subject<input id="subject" name="subject" type="text" placeholder="Subject" maxlength="500"></label>
+      <label class="message-field">Message<textarea id="body" name="body" placeholder="Write a message…" required></textarea></label>
+      <div class="dialog-bottom"><span id="compose-status" role="status"></span><button class="send" id="send" type="submit">Send message ↗</button></div>
+    </form>
+  </dialog>
+</body>
+</html>
