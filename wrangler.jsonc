@@ -13,5 +13,8 @@
       "binding": "MAIL_TOKENS",
       "id": "de56d4f95a9244cdb38cffe3e4d943c8"
     }
-  ]
+  ],
+  "vars": {
+    "ALLOWED_GMAIL": "k11987rn@gmail.com"
+  }
 }
