@@ -15,6 +15,7 @@
     }
   ],
   "vars": {
+    "ALLOWED_ACCESS_EMAIL": "k11987rn@gmail.com",
     "ALLOWED_GMAIL": "k11987rn@gmail.com"
   }
 }
