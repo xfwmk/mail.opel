@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "mail.opel",
+  "name": "mail-opel",
   "main": "src/index.js",
   "compatibility_date": "2026-11-03",
   "assets": {
